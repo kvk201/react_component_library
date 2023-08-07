@@ -4,12 +4,12 @@ const Accordion = () => {
 
     const [expand,setExpand] = useState(false);
 
-    const handleExpand = () => {
+    const toggleExpand = () => {
         setExpand(previousExpand => !previousExpand);
     }
     return(
         <div className="accordion">
-            <button onClick={handleExpand}>
+            <button onClick={toggleExpand}>
                 {expand ? "collapse" : "expand"}
                 <span>{expand ? "-" : "+"}</span>
             </button>
